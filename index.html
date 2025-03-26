@@ -3,72 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Calculadora Simples</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    .calculator {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      width: 300px;
-    }
-
-    .display {
-      width: 100%;
-      height: 50px;
-      font-size: 24px;
-      text-align: right;
-      margin-bottom: 15px;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      background-color: #e6e6e6;
-    }
-
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-
-    .buttons button {
-      padding: 20px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      background-color: #d9d9d9;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .buttons button:hover {
-      background-color: #bfbfbf;
-    }
-
-    .buttons .operator {
-      background-color: #ffa500;
-      color: white;
-    }
-
-    .buttons .equals {
-      background-color: #4caf50;
-      color: white;
-      grid-column: span 2;
-    }
-
-    .buttons .clear {
-      background-color: #f44336;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -99,26 +34,6 @@
     </div>
   </div>
 
-  <script>
-    const display = document.getElementById('display');
-
-    function append(value) {
-      display.value += value;
-    }
-
-    function clearDisplay() {
-      display.value = '';
-    }
-
-    function calculate() {
-      try {
-        display.value = eval(display.value);
-      } catch {
-        display.value = 'Erro';
-      }
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
